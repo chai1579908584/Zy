@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_340"
+        android:background="@mipmap/login_bg"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_80"
+            android:src="@mipmap/login_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_340"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_256"
+        android:background="@mipmap/ed_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_30"
+        android:paddingTop="@dimen/dp_38"
+        android:paddingRight="@dimen/dp_30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/shape_corner_f8f8f8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_22"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:src="@mipmap/login_phone" />
+
+            <EditText
+                android:id="@+id/ed_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_27"
+                android:background="@color/tou"
+                android:gravity="center_vertical"
+                android:hint="请输入手机号"
+                android:textColor="#333"
+                android:textColorHint="#bbb"
+                android:textSize="@dimen/sp_13"
+                android:inputType="number"
+                android:maxLength="11"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_18"
+            android:background="@drawable/shape_corner_f8f8f8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_22"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:src="@mipmap/login_code" />
+
+            <EditText
+                android:id="@+id/ed_code"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_27"
+                android:background="@color/tou"
+                android:gravity="center_vertical"
+                android:hint="请输入验证码"
+                android:textColor="#333"
+                android:textColorHint="#bbb"
+                android:textSize="@dimen/sp_13"
+                android:inputType="number"
+                />
+
+            <TextView
+                android:id="@+id/text_code"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:gravity="center"
+                android:background="@drawable/shape_corner_jianbian"
+                android:text="获取验证码"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_18"
+            android:background="@drawable/shape_corner_f8f8f8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:src="@mipmap/login_yao" />
+
+            <EditText
+                android:id="@+id/ed_inviteCode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:background="@color/tou"
+                android:gravity="center_vertical"
+                android:hint="请输入邀请码（选填）"
+                android:textColor="#333"
+                android:textColorHint="#bbb"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_29"
+            android:background="@drawable/shape_corner_jianbian"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="登陆/注册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/rel_patient_care_agreement"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@mipmap/ic_unchecked" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="我已同意"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#B7B7B7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:background="@drawable/text_underline"
+                android:text="服务协议"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#B7B7B7"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:text="和"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#B7B7B7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:background="@drawable/text_underline"
+                android:text="隐私政策"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#B7B7B7"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_35"
+        android:padding="@dimen/dp_10"
+        android:src="@mipmap/cancel" />
+</RelativeLayout>

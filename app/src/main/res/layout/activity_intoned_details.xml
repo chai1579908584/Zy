@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/shape_corner_jianbian_cangpin"
+    tools:context=".activity.IntonedDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginTop="@dimen/dp_30"
+        >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:src="@mipmap/left_withe" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:src="@mipmap/share" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_marginBottom="@dimen/dp_65"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <WebView
+            android:id="@+id/wv_webView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_330" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_corner_biankuang_b3ffffff"
+        android:padding="@dimen/dp_8"
+        android:layout_margin="@dimen/dp_15"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所属系列"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《向日葵》"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="展示形式"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3D"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="创作者/发行方"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="梵高"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="委托平台"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="宙域科技"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发行时间"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022.05.10"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="技术支持"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BSN&amp;宙域链"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="藏品信息"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_19"
+        android:layout_marginLeft="@dimen/dp_15"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_corner_biankuang_b3ffffff"
+        android:padding="@dimen/dp_8"
+        android:layout_margin="@dimen/dp_15"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="藏品数量"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="链上信息"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/examine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="前往查看"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏者"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="倾听她事"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="钱包地址"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+            <TextView
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="wrap_content"
+                android:text="03B3huscweau1312022.05.10ewfewcewf63424#"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="藏品权益"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_19"
+            android:layout_marginLeft="@dimen/dp_15"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape_corner_biankuang_b3ffffff"
+            android:padding="@dimen/dp_8"
+            android:layout_margin="@dimen/dp_15"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.持有该藏品的用户享受每月1次的数字藏品空投奖励；"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.首次购买该藏品的用户可获得1张优先购卡券；"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="藏品介绍"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_19"
+            android:layout_marginLeft="@dimen/dp_15"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏提示"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_19"
+            android:layout_marginLeft="@dimen/dp_15"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape_corner_biankuang_b3ffffff"
+            android:padding="@dimen/dp_8"
+            android:layout_margin="@dimen/dp_15"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本数宇藏品版权由发行方或原作创作者拥有，除另行取得版权拥有者书面同意外，用户不得将数字藏品用于任何商业用途。请远离非理性炒作，防苑欺诈风险。"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13"
+                />
+
+        </LinearLayout>
+      </LinearLayout>
+    </ScrollView>
+
+<!--        购买按钮=================================================-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_65"
+            android:layout_alignParentBottom="true"
+            android:background="#829FFE"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="¥1999.99"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_24" />
+
+            <TextView
+                android:id="@+id/buy"
+                android:layout_width="@dimen/dp_114"
+                android:layout_height="@dimen/dp_34"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:background="@drawable/shape_corner_fff"
+                android:gravity="center"
+                android:text="立即购买"
+                android:textColor="#1A66E3"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+<!--        我的藏品按钮============================================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_65"
+            android:layout_alignParentBottom="true"
+            android:background="#829EFE"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/consignment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="寄售"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_14"
+                android:gravity="center"
+                />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="@dimen/dp_16"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="详情"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_14"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+<!--        我正在寄售的藏品按钮=================================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_65"
+            android:layout_alignParentBottom="true"
+            android:background="#829EFE"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="取消寄售"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_14"
+                android:gravity="center"
+                />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="@dimen/dp_16"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/change_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="修改价格"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_14"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

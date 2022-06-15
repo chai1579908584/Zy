@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_190"
+    android:layout_marginBottom="@dimen/dp_15"
+    >
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_190" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/mengceng"
+        />
+
+    <ImageView
+        android:id="@+id/head_image"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_88" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="漫威宇宙"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_16"
+        android:layout_below="@+id/head_image"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发行9个系列｜共1000个NFT"
+        android:textColor="#ffcdcdcd"
+        android:textSize="@dimen/sp_12"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
