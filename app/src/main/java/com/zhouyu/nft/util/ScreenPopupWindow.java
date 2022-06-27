@@ -59,7 +59,7 @@ public class ScreenPopupWindow {
                 brandParty.add(seriesListBean);
             }
         }
-        message.add(0,seriesListBeanMsg);
+       // message.add(0,seriesListBeanMsg);
         zhouYu.add(0,seriesListBeanMsg);
         brandParty.add(0,seriesListBeanMsg);
         //要在布局中显示的布局
@@ -219,7 +219,7 @@ public class ScreenPopupWindow {
             }
         }
         if (type == FRAMER) {
-            framerType = (position-1) + "";
+            framerType = position + "";
             if (type==0)
             {
                 setOnClick.onSelect(message);
@@ -230,7 +230,7 @@ public class ScreenPopupWindow {
                 setOnClick.onSelect(brandParty);
             }
         } else {
-            showType = position + "";
+            showType = (position-1) + "";
         }
     }
 

@@ -14,6 +14,7 @@ import com.zhouyu.nft.api.YzApi;
 import com.zhouyu.nft.base.BaseActivity;
 import com.zhouyu.nft.bean.BankCardBean;
 import com.zhouyu.nft.bean.OrderDetailBean;
+import com.zhouyu.nft.util.AmountUtil;
 import com.zhouyu.nft.util.GlideUtil;
 import com.zhouyu.nft.util.PwdPopupWindow;
 import com.zhouyu.nft.util.ToastUtils;
@@ -87,7 +88,8 @@ public class PayActivity extends BaseActivity implements View.OnClickListener {
         GlideUtil.GlideCir(this,orderDetailStr.getProductImg(),image,30);
         name.setText(orderDetailStr.getProductName());
         orderNum.setText(orderDetailStr.getOrderNo());
-        price.setText("￥"+orderDetailStr.getOrderPrice());
+        price.setText(AmountUtil.changeF2Y(orderDetailStr.getOrderPrice()));
+
     }
 
     @SuppressLint("NonConstantResourceId")

@@ -30,7 +30,7 @@ public class PwdPopupWindow {
         PopupWindow popupWindow = new PopupWindow(contentView, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
         cancel.setOnClickListener(v -> popupWindow.dismiss());
-        price.setText("￥"+priceStr);
+        price.setText(AmountUtil.changeF2Y(priceStr));
         pet_pwd.setOnInputFinishListener(password -> {
             setOnClick.onClick(password);
             popupWindow.dismiss();

@@ -30,7 +30,7 @@ import okhttp3.Call;
 
 public class AllCollectionActivity extends BaseActivity implements View.OnClickListener{
 
-    ImageView iv_back,screen;
+    ImageView iv_back,screen,noneMessage;
     TextView search;
 
     SmartRefreshLayout mRefreshLayout;
@@ -50,6 +50,7 @@ public class AllCollectionActivity extends BaseActivity implements View.OnClickL
         iv_back=findViewById(R.id.iv_back);
         search=findViewById(R.id.search);
         screen=findViewById(R.id.screen);
+        noneMessage=findViewById(R.id.noneMessage);
 
         recyclerHot = findViewById(R.id.recyclerHot);
 
@@ -125,14 +126,24 @@ public class AllCollectionActivity extends BaseActivity implements View.OnClickL
             @Override
             public void onSuccess(PresellBean response, int id) {
                 List<PresellBean.RecordsBean> records = response.getRecords();
-                if (records.size()==0)
-                {
-                    ToastUtils.show("暂无内容");
-                    return;
-                }
                 if (recyclerHot == null) {
                     return;
                 }
+                if (records.size()==0)
+                {
+                    if (cancel != null) {
+                        cancel.finishRefresh(1000);
+                        cancel.finishLoadMore(1000);
+                    }
+                    if (page==1)
+                    {
+                        mRefreshLayout.setVisibility(View.GONE);
+                        noneMessage.setVisibility(View.VISIBLE);
+                    }
+                    return;
+                }
+                mRefreshLayout.setVisibility(View.VISIBLE);
+                noneMessage.setVisibility(View.GONE);
                 if (markerAdapter == null) {
                     recyclerHot.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
                     markerAdapter = new MarkerAdapter(mContext,records);

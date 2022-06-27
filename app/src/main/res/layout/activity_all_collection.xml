@@ -79,4 +79,14 @@
             android:layout_height="wrap_content"/>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
+    <ImageView
+        android:id="@+id/noneMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/wu_message"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        />
+
 </LinearLayout>
