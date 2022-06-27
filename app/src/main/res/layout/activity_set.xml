@@ -70,32 +70,6 @@
         android:layout_marginLeft="@dimen/dp_20"
         android:layout_marginRight="@dimen/dp_20"
         android:drawableRight="@mipmap/ic_more"
-        android:drawableLeft="@mipmap/set_agreement"
-        android:drawablePadding="@dimen/dp_10"
-        />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="#eee"
-        android:layout_marginTop="@dimen/dp_4"
-        android:layout_marginLeft="@dimen/dp_40"
-        android:layout_marginRight="@dimen/dp_15"
-        />
-
-
-    <TextView
-        android:id="@+id/set_relation"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_30"
-        android:layout_marginTop="@dimen/dp_12"
-        android:text="联系我们"
-        android:textColor="#ff222629"
-        android:textSize="@dimen/sp_15"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginRight="@dimen/dp_20"
-        android:drawableRight="@mipmap/ic_more"
         android:drawableLeft="@mipmap/set_relation"
         android:drawablePadding="@dimen/dp_10"
         />
@@ -108,6 +82,32 @@
         android:layout_marginLeft="@dimen/dp_40"
         android:layout_marginRight="@dimen/dp_15"
         />
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/set_relation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_30"-->
+<!--        android:layout_marginTop="@dimen/dp_12"-->
+<!--        android:text="联系我们"-->
+<!--        android:textColor="#ff222629"-->
+<!--        android:textSize="@dimen/sp_15"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_marginLeft="@dimen/dp_20"-->
+<!--        android:layout_marginRight="@dimen/dp_20"-->
+<!--        android:drawableRight="@mipmap/ic_more"-->
+<!--        android:drawableLeft="@mipmap/set_relation"-->
+<!--        android:drawablePadding="@dimen/dp_10"-->
+<!--        />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#eee"-->
+<!--        android:layout_marginTop="@dimen/dp_4"-->
+<!--        android:layout_marginLeft="@dimen/dp_40"-->
+<!--        android:layout_marginRight="@dimen/dp_15"-->
+<!--        />-->
 
     <TextView
         android:id="@+id/set_writeoff"

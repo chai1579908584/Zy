@@ -18,21 +18,19 @@
             android:orientation="vertical"
             android:gravity="center_horizontal"
             >
-    <LinearLayout
-        android:id="@+id/ll_change"
+    <RelativeLayout
+        android:id="@+id/rl_change"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_245"
-        android:orientation="vertical"
+        android:layout_height="@dimen/dp_170"
         android:background="@mipmap/me_bg"
-        android:gravity="center_horizontal"
         >
+
         <ImageView
             android:id="@+id/head_image"
             android:layout_width="@dimen/dp_80"
             android:layout_height="@dimen/dp_80"
-            android:src="@mipmap/ic_launcher"
-            android:layout_marginTop="@dimen/dp_40"
-            />
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_60" />
 
         <TextView
             android:id="@+id/name"
@@ -40,23 +38,34 @@
             android:layout_height="wrap_content"
             android:textColor="#ffffffff"
             android:textSize="@dimen/sp_21"
-            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_60"
+            android:layout_toRightOf="@+id/head_image"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:drawableRight="@mipmap/me_name"
+            android:drawablePadding="@dimen/dp_10"
             />
+
         <TextView
             android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffffff"
-            android:textSize="@dimen/sp_15"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_toRightOf="@+id/head_image"
             android:drawableLeft="@mipmap/man"
             android:drawablePadding="@dimen/dp_5"
-            android:layout_marginTop="@dimen/dp_5"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_15"
             />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/age"
+            android:layout_marginLeft="@dimen/dp_10"
             >
 <!--            <TextView-->
 <!--                android:id="@+id/walletAdress"-->
@@ -78,8 +87,8 @@
                 android:id="@+id/inviteCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#ffffffff"
-                android:textSize="12sp"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/sp_12"
                 android:background="@drawable/shape_corner_80ffffff"
                 android:paddingLeft="@dimen/dp_8"
                 android:paddingRight="@dimen/dp_8"
@@ -95,107 +104,110 @@
             android:layout_height="wrap_content"
             android:textColor="#ffffffff"
             android:textSize="@dimen/sp_12"
-            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_15"
-            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_7"
             android:ellipsize="end"
             android:maxLines="1"
+            android:layout_below="@+id/age"
+            android:layout_toRightOf="@+id/head_image"
             />
-    </LinearLayout>
+    </RelativeLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="@dimen/dp_270"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_marginTop="@dimen/dp_5"-->
+<!--        >-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="99"-->
+<!--                android:textColor="#ff000000"-->
+<!--                android:textSize="@dimen/sp_24"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="DAO"-->
+<!--                android:textColor="#ff676767"-->
+<!--                android:textSize="@dimen/sp_12"-->
+<!--                android:layout_marginTop="@dimen/dp_3"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
+<!--        <View-->
+<!--            android:layout_width="@dimen/dp_1"-->
+<!--            android:layout_height="@dimen/dp_20"-->
+<!--            android:background="#bcbcbc"-->
+<!--            />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="97"-->
+<!--                android:textColor="#ff000000"-->
+<!--                android:textSize="@dimen/sp_24"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="粉丝"-->
+<!--                android:textColor="#ff676767"-->
+<!--                android:textSize="@dimen/sp_12"-->
+<!--                android:layout_marginTop="@dimen/dp_3"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
+<!--        <View-->
+<!--            android:layout_width="@dimen/dp_1"-->
+<!--            android:layout_height="@dimen/dp_20"-->
+<!--            android:background="#bcbcbc"-->
+<!--            />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="72"-->
+<!--                android:textColor="#ff000000"-->
+<!--                android:textSize="@dimen/sp_24"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="关注"-->
+<!--                android:textColor="#ff676767"-->
+<!--                android:textSize="@dimen/sp_12"-->
+<!--                android:layout_marginTop="@dimen/dp_3"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
 
     <LinearLayout
-        android:layout_width="@dimen/dp_270"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="@dimen/dp_5"
-        >
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="99"
-                android:textColor="#ff000000"
-                android:textSize="@dimen/sp_24"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DAO"
-                android:textColor="#ff676767"
-                android:textSize="@dimen/sp_12"
-                android:layout_marginTop="@dimen/dp_3"
-                />
-        </LinearLayout>
-
-        <View
-            android:layout_width="@dimen/dp_1"
-            android:layout_height="@dimen/dp_20"
-            android:background="#bcbcbc"
-            />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="97"
-                android:textColor="#ff000000"
-                android:textSize="@dimen/sp_24"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="粉丝"
-                android:textColor="#ff676767"
-                android:textSize="@dimen/sp_12"
-                android:layout_marginTop="@dimen/dp_3"
-                />
-        </LinearLayout>
-
-        <View
-            android:layout_width="@dimen/dp_1"
-            android:layout_height="@dimen/dp_20"
-            android:background="#bcbcbc"
-            />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="72"
-                android:textColor="#ff000000"
-                android:textSize="@dimen/sp_24"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="关注"
-                android:textColor="#ff676767"
-                android:textSize="@dimen/sp_12"
-                android:layout_marginTop="@dimen/dp_3"
-                />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
+        android:id="@+id/llMyCollection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -213,9 +225,9 @@
             android:textSize="@dimen/sp_16"
             />
         <TextView
+            android:id="@+id/num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="共拥有12件藏品"
             android:textColor="#ffffffff"
             android:textSize="@dimen/sp_13"
             android:layout_marginTop="@dimen/dp_10"
@@ -285,125 +297,159 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/shape_corner_fff_9dp"
-        android:layout_marginLeft="@dimen/dp_15"
-        android:layout_marginRight="@dimen/dp_15"
-        >
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@drawable/shape_corner_fff_9dp"-->
+<!--        android:layout_marginLeft="@dimen/dp_15"-->
+<!--        android:layout_marginRight="@dimen/dp_15"-->
+<!--        >-->
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            >
-            <TextView
-                android:id="@+id/blindbox"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="盲盒"
-                android:textColor="#ff676767"
-                android:textSize="@dimen/sp_13"
-                android:drawableTop="@mipmap/icon_blindbox"
-                android:gravity="center"
-                android:drawablePadding="@dimen/dp_4"
-                />
-            <TextView
-                android:id="@+id/vr"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="VR-NFT"
-                android:textColor="#ff676767"
-                android:textSize="@dimen/sp_13"
-                android:drawableTop="@mipmap/icon_vr"
-                android:gravity="center"
-                android:drawablePadding="@dimen/dp_4"
-                android:layout_marginTop="@dimen/dp_10"
-                />
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingTop="@dimen/dp_10"-->
+<!--            android:paddingBottom="@dimen/dp_10"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:id="@+id/blindbox"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="盲盒"-->
+<!--                android:textColor="#ff676767"-->
+<!--                android:textSize="@dimen/sp_13"-->
+<!--                android:drawableTop="@mipmap/icon_blindbox"-->
+<!--                android:gravity="center"-->
+<!--                android:drawablePadding="@dimen/dp_4"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/vr"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="VR-NFT"-->
+<!--                android:textColor="#ff676767"-->
+<!--                android:textSize="@dimen/sp_13"-->
+<!--                android:drawableTop="@mipmap/icon_vr"-->
+<!--                android:gravity="center"-->
+<!--                android:drawablePadding="@dimen/dp_4"-->
+<!--                android:layout_marginTop="@dimen/dp_10"-->
+<!--                />-->
+<!--        </LinearLayout>-->
 
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10"
-            android:gravity="center_horizontal"
-            >
-            <TextView
-                android:id="@+id/airdrop"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="空投"
-                android:textColor="#ff676767"
-                android:textSize="@dimen/sp_13"
-                android:drawableTop="@mipmap/icon_airdrop"
-                android:gravity="center"
-                android:drawablePadding="@dimen/dp_4"
-                />
-            <TextView
-                android:id="@+id/message"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="链上信息"
-                android:textColor="#ff676767"
-                android:textSize="@dimen/sp_13"
-                android:drawableTop="@mipmap/icon_message"
-                android:gravity="center"
-                android:drawablePadding="@dimen/dp_4"
-                android:layout_marginTop="@dimen/dp_10"
-                />
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingTop="@dimen/dp_10"-->
+<!--            android:paddingBottom="@dimen/dp_10"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:id="@+id/airdrop"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="空投"-->
+<!--                android:textColor="#ff676767"-->
+<!--                android:textSize="@dimen/sp_13"-->
+<!--                android:drawableTop="@mipmap/icon_airdrop"-->
+<!--                android:gravity="center"-->
+<!--                android:drawablePadding="@dimen/dp_4"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/message"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="链上信息"-->
+<!--                android:textColor="#ff676767"-->
+<!--                android:textSize="@dimen/sp_13"-->
+<!--                android:drawableTop="@mipmap/icon_message"-->
+<!--                android:gravity="center"-->
+<!--                android:drawablePadding="@dimen/dp_4"-->
+<!--                android:layout_marginTop="@dimen/dp_10"-->
+<!--                />-->
+<!--        </LinearLayout>-->
 
-        <TextView
-            android:id="@+id/fuse"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="融合"
-            android:textColor="#ff676767"
-            android:textSize="@dimen/sp_13"
-            android:drawableTop="@mipmap/icon_fuse"
-            android:gravity="center"
-            android:drawablePadding="@dimen/dp_4"
-            android:layout_marginTop="@dimen/dp_10"
-            />
+<!--        <TextView-->
+<!--            android:id="@+id/fuse"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="融合"-->
+<!--            android:textColor="#ff676767"-->
+<!--            android:textSize="@dimen/sp_13"-->
+<!--            android:drawableTop="@mipmap/icon_fuse"-->
+<!--            android:gravity="center"-->
+<!--            android:drawablePadding="@dimen/dp_4"-->
+<!--            android:layout_marginTop="@dimen/dp_10"-->
+<!--            />-->
 
-        <TextView
-            android:id="@+id/hunt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="寻宝"
-            android:textColor="#ff676767"
-            android:textSize="@dimen/sp_13"
-            android:drawableTop="@mipmap/icon_hunt"
-            android:gravity="center"
-            android:drawablePadding="@dimen/dp_4"
-            android:layout_marginTop="@dimen/dp_10"
-            />
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/hunt"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="寻宝"-->
+<!--            android:textColor="#ff676767"-->
+<!--            android:textSize="@dimen/sp_13"-->
+<!--            android:drawableTop="@mipmap/icon_hunt"-->
+<!--            android:gravity="center"-->
+<!--            android:drawablePadding="@dimen/dp_4"-->
+<!--            android:layout_marginTop="@dimen/dp_10"-->
+<!--            />-->
+<!--    </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_64"
+                android:layout_height="@dimen/dp_115"
                 android:orientation="horizontal"
                 android:background="@drawable/shape_corner_fff_9dp"
-                android:layout_margin="@dimen/dp_15"
-                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
                 >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/fuse"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="融合"
+                        android:textColor="#ff676767"
+                        android:textSize="@dimen/sp_13"
+                        android:drawableTop="@mipmap/icon_fuse"
+                        android:gravity="center"
+                        android:drawablePadding="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_10"
+                        />
+
+                    <TextView
+                        android:id="@+id/set"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="设置"
+                        android:textColor="#ff676767"
+                        android:textSize="@dimen/sp_13"
+                        android:drawableTop="@mipmap/icon_set"
+                        android:gravity="center"
+                        android:drawablePadding="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_10"
+                        />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/luckyvalue"
@@ -416,6 +462,7 @@
                     android:drawableTop="@mipmap/icon_luckyvalue"
                     android:gravity="center"
                     android:drawablePadding="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_10"
                     />
 
                 <TextView
@@ -429,6 +476,7 @@
                     android:drawableTop="@mipmap/icon_fingerpost"
                     android:gravity="center"
                     android:drawablePadding="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_10"
                     />
 
                 <TextView
@@ -442,20 +490,9 @@
                     android:drawableTop="@mipmap/icon_help"
                     android:gravity="center"
                     android:drawablePadding="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_10"
                     />
 
-                <TextView
-                    android:id="@+id/set"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="设置"
-                    android:textColor="#ff676767"
-                    android:textSize="@dimen/sp_13"
-                    android:drawableTop="@mipmap/icon_set"
-                    android:gravity="center"
-                    android:drawablePadding="@dimen/dp_4"
-                    />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

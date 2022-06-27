@@ -3,6 +3,7 @@ package com.zhouyu.nft.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.viewpager.widget.ViewPager;
@@ -10,6 +11,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.zhouyu.nft.R;
 import com.zhouyu.nft.adapter.MainPagerAdapter;
 import com.zhouyu.nft.base.BaseActivity;
+import com.zhouyu.nft.util.ParamsConfigs;
 import com.zhouyu.nft.util.SpUtil;
 import com.zhouyu.nft.view.LockableViewPager;
 
@@ -34,8 +36,8 @@ public class HomeActivity extends BaseActivity {
         {
             Intent intent=new Intent(HomeActivity.this,LoginActivity.class);
             startActivity(intent);
+            finish();
         }
-
         initView();
         initClick();
     }

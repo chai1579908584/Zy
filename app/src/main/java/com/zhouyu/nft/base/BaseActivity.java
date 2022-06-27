@@ -1,6 +1,7 @@
 package com.zhouyu.nft.base;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.os.Build;
@@ -11,11 +12,10 @@ import android.view.WindowManager;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.zhouyu.nft.R;
-import com.zhouyu.nft.util.DialogUtil;
+import com.zhouyu.nft.util.LoadingDialog;
 import com.zhouyu.nft.util.StatusBarUtils;
 import com.zhouyu.nft.util.ToastUtils;
 
@@ -38,6 +38,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     private View loadingView;
     private View errorView;
     private View emptyView;
+
+    public static Dialog dialog;
 
     private ProgressDialog mDialog;
 
@@ -226,25 +228,41 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         boolean onBackPressed();
     }
 
-
-    public ProgressDialog showWaitDialog(@StringRes int message) {
-        return showWaitDialog(getString(message));
+    public void showDialog(){
+       //加载弹窗
+        LoadingDialog.Builder loadBuilder = new LoadingDialog.Builder(this)
+                .setCancelable(true)//返回键是否可点击
+                .setCancelOutside(false);//窗体外是否可点击
+        dialog = loadBuilder.create();
+        dialog.show();//显示弹窗
     }
 
-    public ProgressDialog showWaitDialog(String message) {
-        return showWaitDialog(message, true);
-    }
-
-    public ProgressDialog showWaitDialog(String message, boolean cancelable) {
-        if (mDialog == null) {
-            mDialog = DialogUtil.getWaitDialog(this, message);
+    public static void dismissDialog(){
+        if (dialog!=null)
+        {
+            dialog.dismiss();
         }
-        mDialog.setCancelable(cancelable);
-        mDialog.setCanceledOnTouchOutside(false);
-        mDialog.setMessage(message);
-        mDialog.show();
-        return mDialog;
     }
+
+
+//    public ProgressDialog showWaitDialog(@StringRes int message) {
+//        return showWaitDialog(getString(message));
+//    }
+//
+//    public ProgressDialog showWaitDialog(String message) {
+//        return showWaitDialog(message, true);
+//    }
+//
+//    public ProgressDialog showWaitDialog(String message, boolean cancelable) {
+//        if (mDialog == null) {
+//            mDialog = DialogUtil.getWaitDialog(this, message);
+//        }
+//        mDialog.setCancelable(cancelable);
+//        mDialog.setCanceledOnTouchOutside(false);
+//        mDialog.setMessage(message);
+//        mDialog.show();
+//        return mDialog;
+//    }
 
     public void hideWaitDialog() {
         if (mDialog != null) {

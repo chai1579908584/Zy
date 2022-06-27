@@ -10,6 +10,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
+import com.zhouyu.nft.R;
 
 public class GlideUtil {
 
@@ -34,6 +35,20 @@ public class GlideUtil {
         Glide.with(context)
                 .load(pic)
                 .apply(options)
+                .placeholder(R.mipmap.default_image)
+                .into(imageView);
+    }
+
+    //加载URL图片头像圆角
+    @SuppressLint("CheckResult")
+    public static void GlideCirHead(Context context, String pic, ImageView imageView,int roundingRadius){
+        RoundedCorners roundedCorners = new RoundedCorners(roundingRadius);
+        RequestOptions options = RequestOptions.bitmapTransform(roundedCorners);
+        options.diskCacheStrategy(DiskCacheStrategy.ALL).transform(new MultiTransformation(new CenterCrop(), new RoundedCorners(roundingRadius)));
+        Glide.with(context)
+                .load(pic)
+                .apply(options)
+                .placeholder(R.mipmap.quesheng_head)
                 .into(imageView);
     }
 

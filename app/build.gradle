@@ -7,13 +7,40 @@ android {
 
     defaultConfig {
         applicationId "com.zhouyu.nft"
-        minSdk 16
+        minSdk 23
         targetSdk 32
         versionCode 1
         versionName "2.0.0"
-
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' , 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            storeFile file('Zy.jks')
+            storePassword 'zhouyu'
+            keyAlias 'zy'
+            keyPassword 'zhouyu'
+        }
+    }
+    //签名
+//    signingConfigs {
+//        release {
+//            storeFile file('Zy.jks')
+//            storePassword 'zhouyu'
+//            keyAlias 'zy'
+//            keyPassword 'zhouyu'
+//        }
+//        debug {
+//            storeFile file('Zy.jks')
+//            storePassword 'zhouyu'
+//            keyAlias 'zy'
+//            keyPassword 'zhouyu'
+//        }
+//    }
 
 
     buildTypes {
@@ -54,6 +81,10 @@ android {
         //阿里云实人认证依赖
         implementation files('libs/android-aliyunface-sdk-release-1.1.9.aar')
 
+        implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+        implementation 'com.squareup.okio:okio:1.14.0'
+        implementation 'com.alibaba:fastjson:1.2.62'
+
         //加密
         implementation 'cn.hutool:hutool-all:4.6.8'
 
@@ -63,6 +94,13 @@ android {
         //鲁班压缩
         api 'top.zibin:Luban:1.1.8'
 
+        //Bugly
+        implementation 'com.tencent.bugly:crashreport:latest.release'
+
+        //微信分享
+        implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+        implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
     }
 }
 

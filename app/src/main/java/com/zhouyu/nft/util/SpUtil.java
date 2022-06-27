@@ -30,7 +30,10 @@ public class SpUtil {
         editor.putString("Nick", data.getNick());
         editor.putString("RcToken", data.getRcToken());
         editor.putString("Sex", data.getSex());
+        editor.putString("InviteCode", data.getInviteCode());
         editor.putString("WalletAdress", data.getWalletAdress());
+        editor.putString("isRealName", data.getIsRealName());
+        editor.putString("Phone", data.getPhone());
         editor.commit();
     }
 
@@ -56,7 +59,10 @@ public class SpUtil {
         String RcToken =mySharePreferences.getString("RcToken", "");
         String Sex =mySharePreferences.getString("Sex", "");
         String Token =mySharePreferences.getString("Token", "");
+        String InviteCode =mySharePreferences.getString("InviteCode", "");
         String WalletAdress =mySharePreferences.getString("WalletAdress", "");
+        String IsRealName =mySharePreferences.getString("isRealName", "");
+        String Phone =mySharePreferences.getString("Phone", "");
         UserInfo data=new UserInfo();
         data.setAge(Age);
         data.setDaoNum(DaoNum);
@@ -68,7 +74,10 @@ public class SpUtil {
         data.setRcToken(RcToken);
         data.setSex(Sex);
         data.setToken(Token);
+        data.setInviteCode(InviteCode);
         data.setWalletAdress(WalletAdress);
+        data.setIsRealName(IsRealName);
+        data.setPhone(Phone);
         return data;
     }
 
@@ -121,4 +130,19 @@ public class SpUtil {
         editor.commit();
     }
 
+
+    //存储环境
+    @SuppressLint("ApplySharedPref")
+    public static void writeEnv(Context context, String env){
+        SharedPreferences mySharePreferences =context.getSharedPreferences("Env", Activity.MODE_PRIVATE|Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor =mySharePreferences.edit();
+        editor.putString("env", env);
+        editor.commit();
+    }
+
+    //读取环境
+    public static String readEnv(Context context,String mo){
+        SharedPreferences mySharePreferences =context.getSharedPreferences("Env", Activity.MODE_PRIVATE|Activity.MODE_PRIVATE);
+        return mySharePreferences.getString("env", mo);
+    }
 }

@@ -46,8 +46,8 @@ public class ChangeMessageActivity extends BaseActivity implements View.OnClickL
     EditText name,signature,age;
     File file;
     String headUrl="";
-    String sex="1";
-
+    String sex="";
+    UserInfo userInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,9 +74,8 @@ public class ChangeMessageActivity extends BaseActivity implements View.OnClickL
     }
 
     private void setData() {
-        UserInfo userInfo= SpUtil.readData(this);
-        headUrl=userInfo.getHeadImg();
-        GlideUtil.GlideCir(this,headUrl,head_image,300);
+        userInfo= SpUtil.readData(this);
+        GlideUtil.GlideCirHead(this,userInfo.getHeadImg(),head_image,300);
         name.setText(userInfo.getNick());
         signature.setText(userInfo.getIntroduce());
         if ("1".equals(userInfo.getSex()))
@@ -84,9 +83,12 @@ public class ChangeMessageActivity extends BaseActivity implements View.OnClickL
             sex="1";
             man.setImageResource(R.mipmap.ic_checked);
             woman.setImageResource(R.mipmap.ic_unchecked);
-        }else {
+        }else if ("0".equals(userInfo.getSex())){
             sex="0";
             woman.setImageResource(R.mipmap.ic_checked);
+            man.setImageResource(R.mipmap.ic_unchecked);
+        }else {
+            woman.setImageResource(R.mipmap.ic_unchecked);
             man.setImageResource(R.mipmap.ic_unchecked);
         }
         age.setText(userInfo.getAge());
@@ -120,8 +122,23 @@ public class ChangeMessageActivity extends BaseActivity implements View.OnClickL
     }
 
     private void getData() {
-         YzApi.getChangeMessage(this, headUrl, age.getText().toString(), signature.getText().
-                 toString(), name.getText().toString(), sex, new GXCallback<String>() {
+        String ageStr = age.getText().toString();
+        String signatureStr = signature.getText().toString();
+        String nameStr = name.getText().toString();
+        if (ageStr.isEmpty()||signatureStr.isEmpty()||nameStr.isEmpty())
+        {
+            ToastUtils.show(this,"请完善信息");
+            return;
+        }
+        if (headUrl.isEmpty())
+        {
+            if (userInfo.getHeadImg()==null||userInfo.getHeadImg().isEmpty())
+            {
+                ToastUtils.show(this,"请添加头像");
+                return;
+            }
+        }
+        YzApi.getChangeMessage(this, headUrl, ageStr, signatureStr, nameStr, sex, new GXCallback<String>() {
              @Override
              public void onSuccess(String response, int id) {
                  ToastUtils.show(ChangeMessageActivity.this,"修改成功");
@@ -203,7 +220,7 @@ public class ChangeMessageActivity extends BaseActivity implements View.OnClickL
         YzApi.getUpData(file, "1", new GXCallback<UpDataBean>() {
             @Override
             public void onSuccess(UpDataBean response, int id) {
-                GlideUtil.GlideCir(ChangeMessageActivity.this,response.getPath(),head_image,300);
+                GlideUtil.GlideCirHead(ChangeMessageActivity.this,response.getPath(),head_image,300);
                 headUrl=response.getImgUrl();
             }
         });

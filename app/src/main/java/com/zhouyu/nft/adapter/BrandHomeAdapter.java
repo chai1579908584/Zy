@@ -1,5 +1,6 @@
 package com.zhouyu.nft.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.zhouyu.nft.R;
+import com.zhouyu.nft.bean.BrandBean;
+import com.zhouyu.nft.bean.PresellBean;
 import com.zhouyu.nft.util.GlideUtil;
 
 import java.util.List;
@@ -18,12 +21,29 @@ import java.util.List;
 public class BrandHomeAdapter extends RecyclerView.Adapter<BrandHomeAdapter.My>{
 
     private final Context mContext;
-    private final List<String> messageList;
+    private final List<BrandBean.RecordsBean> messageList;
 
-    public BrandHomeAdapter(Context context, List<String> messageList){
+    public BrandHomeAdapter(Context context, List<BrandBean.RecordsBean> messageList){
         mContext=context;
         this.messageList=messageList;
     }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void addData(List<BrandBean.RecordsBean> recordsBeans) {
+        this.messageList.addAll(recordsBeans);
+        notifyDataSetChanged();
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void refreshData(List<BrandBean.RecordsBean> recordsBeans) {
+        if (recordsBeans != null && recordsBeans.size() > 0) {
+            this.messageList.clear();
+            this.messageList.addAll(recordsBeans);
+        }
+        notifyDataSetChanged();
+    }
+
+
     @NonNull
     @Override
     public My onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,14 +52,15 @@ public class BrandHomeAdapter extends RecyclerView.Adapter<BrandHomeAdapter.My>{
         return new My(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull My holder, int position) {
-
-        GlideUtil.GlideCir(mContext,"https://newbbs-fd.zol-img.com.cn/t_s288x500/g7/M00/08/05/ChMkLGKF9u6IFqbiAAdgANq759sAADhHwPbfPEAB2AY118.jpg",holder.bg,30);
-        GlideUtil.GlideCir(mContext,"https://newbbs-fd.zol-img.com.cn/t_s288x500/g7/M00/08/05/ChMkLGKF9u6IFqbiAAdgANq759sAADhHwPbfPEAB2AY118.jpg",holder.head_image,100);
-
-        holder.itemView.setOnClickListener(v -> setOnClick.onClick("11"));
-
+        BrandBean.RecordsBean brandBean = messageList.get(position);
+        GlideUtil.GlideCir(mContext,brandBean.getShowImg(),holder.bg,30);
+        GlideUtil.GlideCirHead(mContext,brandBean.getLogoUrl(),holder.head_image,100);
+        holder.name.setText(brandBean.getName());
+        holder.num.setText("发行"+brandBean.getNftNum()+"个系列｜共"+brandBean.getNftPublishNum()+"个NFT");
+        holder.itemView.setOnClickListener(v -> setOnClick.onClick(brandBean.getBid()));
     }
 
     @Override

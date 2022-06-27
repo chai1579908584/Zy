@@ -6,6 +6,8 @@ import android.os.Looper;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.zhouyu.nft.MyApplication;
+
 public class ToastUtils {
 
     private static final Handler handler = new Handler(Looper.getMainLooper());
@@ -31,6 +33,10 @@ public class ToastUtils {
     public static void show(Context context, String str) {
         show(str, Toast.LENGTH_SHORT , context);
     }
+    public static void show( String str) {
+        show(str, Toast.LENGTH_SHORT , MyApplication.context);
+    }
+
 
     public static void show(String str, int time ,Context context) {
         if (TextUtils.isEmpty(str)) {

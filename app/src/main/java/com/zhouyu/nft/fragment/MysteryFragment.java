@@ -16,29 +16,23 @@ import com.zhouyu.nft.R;
 import com.zhouyu.nft.activity.IntonedDetailsActivity;
 
 
-public class MysteryFragment extends Fragment implements View.OnClickListener{
+public class MysteryFragment extends Fragment {
 
     Context mContext;
-    TextView home;
-    public MysteryFragment(Context context){
-        mContext=context;
+    String bid;
+
+    public MysteryFragment(Context context, String bid) {
+        mContext = context;
+        this.bid = bid;
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View inflate = inflater.inflate(R.layout.fragment_mystery, container, false);
 
-         home = inflate.findViewById(R.id.home);
 
-         home.setOnClickListener(this);
         return inflate;
     }
 
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId())
-        {
-        }
-    }
 }

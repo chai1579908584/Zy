@@ -11,6 +11,8 @@
         <entry key="..\:/Zy/app/src/main/res/drawable/selector_main_tab_home.xml" value="0.1" />
         <entry key="..\:/Zy/app/src/main/res/drawable/selector_main_tab_market.xml" value="0.1" />
         <entry key="..\:/Zy/app/src/main/res/drawable/selector_main_tab_me.xml" value="0.1" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_000_touming.xml" value="0.2105" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_323232_touming.xml" value="0.238" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_403392fb.xml" value="0.2815" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_80ffffff.xml" value="0.2195" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_80ffffff_xiaojiao.xml" value="0.2195" />
@@ -18,8 +20,12 @@
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_biankuang.xml" value="0.274" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_biankuang_2e5eff.xml" value="0.1675" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_biankuang_829ffe.xml" value="0.1675" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_biankuang_8d.xml" value="0.2875" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_biankuang_989898.xml" value="0.3075" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_biankuang_b3ffffff.xml" value="0.1675" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_biankuang_c0d0ff.xml" value="0.203" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_biankuang_fafdff.xml" value="0.1805" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_c3.xml" value="0.2395" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_d8.xml" value="0.224" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_e5e5e5.xml" value="0.2965" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_f1f1f1.xml" value="0.1885" />
@@ -28,45 +34,62 @@
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_ff3392fb.xml" value="0.1295" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_ffaa00.xml" value="0.2195" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_fff.xml" value="0.1155" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_fff_10dp.xml" value="0.211" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_fff_15dp.xml" value="0.238" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_fff_9dp.xml" value="0.13" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_fff_tou.xml" value="0.239" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_fff_touming.xml" value="0.1015" />
+        <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_fff_xiayuan.xml" value="0.301" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_jianbian.xml" value="0.274" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_corner_jianbian_cangpin.xml" value="0.316" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_shangyuan.xml" value="0.24" />
         <entry key="..\:/Zy/app/src/main/res/drawable/shape_youyuan.xml" value="0.2665" />
         <entry key="..\:/Zy/app/src/main/res/drawable/text_underline.xml" value="0.108" />
         <entry key="..\:/Zy/app/src/main/res/drawable/white_dot_bg.xml" value="0.2755" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_add_bank_card.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_add_bank_card.xml" value="0.22" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_airdrop_record.xml" value="0.24909420289855072" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_authentication.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_all_collection.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_authentication.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_authentication_result.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_balance_statement.xml" value="0.25" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_bank_card_avtivity.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_bank_card_avtivity.xml" value="0.2" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_brand_home.xml" value="0.25" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_brand_list.xml" value="0.17916666666666667" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_buy_record.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_calendar.xml" value="0.2984375" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_chain_message.xml" value="0.25" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_change_message.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_change_message.xml" value="0.5402597402597402" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_changeprice.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_classify_collection.xml" value="0.22" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_collection.xml" value="0.20833333333333334" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_collection_list.xml" value="0.28125" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_collection_of_records.xml" value="0.2" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_consignment.xml" value="0.31302083333333336" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_env.xml" value="0.25" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_face_recognition.xml" value="0.33229166666666665" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_fingerpost.xml" value="0.3182291666666667" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_fuse.xml" value="0.25833333333333336" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_fuse_record.xml" value="0.25833333333333336" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_give_record.xml" value="0.3" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_guidepage.xml" value="0.25" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_help.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_h5.xml" value="0.2682291666666667" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_help.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_hfive.xml" value="0.2682291666666667" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_in_regard_to.xml" value="0.25" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_information.xml" value="0.21603260869565216" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_intoned_details.xml" value="0.33" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_information.xml" value="0.19" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_intoned_details.xml" value="0.27901785714285715" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_invite.xml" value="0.26875" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_my_collection.xml" value="0.2484375" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_mystery_record.xml" value="0.2625" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_no.xml" value="0.22708333333333333" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_order_details.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_ourreception_details.xml" value="0.3" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_outreception_details.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_pay.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_pwd.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_real_name_success.xml" value="0.25" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_real_name_ti.xml" value="0.25" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_search.xml" value="0.25" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_sell_record.xml" value="0.21145833333333333" />
@@ -74,20 +97,37 @@
         <entry key="..\:/Zy/app/src/main/res/layout/activity_user_message.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_wallet.xml" value="0.25" />
         <entry key="..\:/Zy/app/src/main/res/layout/activity_withdraw.xml" value="0.33" />
-        <entry key="..\:/Zy/app/src/main/res/layout/activity_write_off.xml" value="0.26145833333333335" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_write_off.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/activity_write_offphone.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/adapter_addimage.xml" value="0.26614583333333336" />
-        <entry key="..\:/Zy/app/src/main/res/layout/adapter_bankcard.xml" value="0.16" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_bankcard.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_bankcardcode.xml" value="0.2484375" />
         <entry key="..\:/Zy/app/src/main/res/layout/adapter_brandhome.xml" value="0.2786458333333333" />
         <entry key="..\:/Zy/app/src/main/res/layout/adapter_brandlist.xml" value="0.31302083333333336" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_calender.xml" value="0.9" />
         <entry key="..\:/Zy/app/src/main/res/layout/adapter_chainmessage.xml" value="0.2828125" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_collectionitem.xml" value="0.259375" />
         <entry key="..\:/Zy/app/src/main/res/layout/adapter_fuserecord.xml" value="0.25833333333333336" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_homebrand.xml" value="0.2708333333333333" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_homecollection.xml" value="0.28489583333333335" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_homegoods.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_hot.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_hotsale.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_image.xml" value="0.23645833333333333" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_information.xml" value="0.24010416666666667" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_label.xml" value="0.24583333333333332" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_marker.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/adapter_market.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_presell.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_screen.xml" value="0.33" />
         <entry key="..\:/Zy/app/src/main/res/layout/adapter_search.xml" value="0.26927083333333335" />
         <entry key="..\:/Zy/app/src/main/res/layout/adapter_sellrecord.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/adapter_unpaid.xml" value="0.25" />
         <entry key="..\:/Zy/app/src/main/res/layout/base_footer.xml" value="0.221875" />
         <entry key="..\:/Zy/app/src/main/res/layout/base_load_failed.xml" value="0.1661600810536981" />
         <entry key="..\:/Zy/app/src/main/res/layout/base_no_more.xml" value="0.1661600810536981" />
         <entry key="..\:/Zy/app/src/main/res/layout/code_popupwindow.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/dialog_loading.xml" value="0.2125" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_PREVIOUS.xml" value="0.20833333333333334" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_accomplish.xml" value="0.16927083333333334" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_boutique.xml" value="0.29270833333333335" />
@@ -102,14 +142,21 @@
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_openmystery.xml" value="0.2625" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_out.xml" value="0.3" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_presell.xml" value="0.20833333333333334" />
+        <entry key="..\:/Zy/app/src/main/res/layout/fragment_previous.xml" value="0.23072916666666668" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_received.xml" value="0.25" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_reception.xml" value="0.3" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_unclaimed.xml" value="0.2625" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_unpaid.xml" value="0.16927083333333334" />
         <entry key="..\:/Zy/app/src/main/res/layout/fragment_unpaidmystery.xml" value="0.2625" />
-        <entry key="..\:/Zy/app/src/main/res/layout/layout_loading.xml" value="0.1" />
+        <entry key="..\:/Zy/app/src/main/res/layout/layout_loading.xml" value="0.22" />
         <entry key="..\:/Zy/app/src/main/res/layout/nomore.xml" value="0.2864583333333333" />
-        <entry key="..\:/Zy/app/src/main/res/layout/popup_layout.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/popup_layout.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/popupwindow_loading.xml" value="0.20625" />
+        <entry key="..\:/Zy/app/src/main/res/layout/popupwindow_loging.xml" value="0.24791666666666667" />
+        <entry key="..\:/Zy/app/src/main/res/layout/popupwindow_question.xml" value="0.25" />
+        <entry key="..\:/Zy/app/src/main/res/layout/popupwindow_recycler_bankcode.xml" value="0.2078125" />
+        <entry key="..\:/Zy/app/src/main/res/layout/popupwindow_screen.xml" value="0.33" />
+        <entry key="..\:/Zy/app/src/main/res/layout/pwd_popupwindow.xml" value="0.2677083333333333" />
         <entry key="..\:/Zy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1565" />
       </map>
     </option>

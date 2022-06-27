@@ -30,8 +30,35 @@ public class UserInfo implements Serializable {
         private String sex;
         private String token;
         private String walletAdress;
+        private String isRealName;
+        private String phone;
+        private String nftNum;
 
-        public String getAge() {
+    public String getNftNum() {
+        return nftNum;
+    }
+
+    public void setNftNum(String nftNum) {
+        this.nftNum = nftNum;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getIsRealName() {
+        return isRealName;
+    }
+
+    public void setIsRealName(String isRealName) {
+        this.isRealName = isRealName;
+    }
+
+    public String getAge() {
             return age;
         }
 

@@ -5,13 +5,10 @@
     android:gravity="center"
     >
 
-    <TextView
-        android:id="@+id/home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_40"
-        android:textColor="#333"
-        android:text="盲盒"
-        />
+  <ImageView
+      android:layout_width="@dimen/dp_280"
+      android:layout_height="@dimen/dp_252"
+      android:src="@mipmap/wu_message"
+      />
 
 </LinearLayout>

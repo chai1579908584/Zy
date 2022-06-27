@@ -40,9 +40,9 @@
         android:layout_marginTop="@dimen/dp_40"
         >
         <ImageView
+            android:id="@+id/ewm"
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_120"
-            android:src="@mipmap/ic_launcher_round"
             android:layout_gravity="center_horizontal"
             />
 
@@ -123,14 +123,14 @@
                 />
 
             <TextView
+                android:id="@+id/e_mail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="zhouyunft@163.com"
-                android:textColor="#ff222629"
-                android:textSize="@dimen/sp_13"
-                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
-                />
+                android:layout_centerVertical="true"
+                android:textColor="#ff222629"
+                android:textSize="@dimen/sp_13" />
         </RelativeLayout>
     </LinearLayout>
+
 </RelativeLayout>

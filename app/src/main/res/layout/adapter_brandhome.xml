@@ -14,8 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_80"
         android:layout_alignParentBottom="true"
-        android:src="@mipmap/mengceng"
-        />
+        android:background="@drawable/shape_corner_000_touming" />
 
     <ImageView
         android:id="@+id/head_image"

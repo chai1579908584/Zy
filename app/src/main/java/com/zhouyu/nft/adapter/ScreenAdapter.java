@@ -12,60 +12,50 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.zhouyu.nft.R;
-import com.zhouyu.nft.bean.PresellBean;
-import com.zhouyu.nft.util.GlideUtil;
+import com.zhouyu.nft.bean.BankCardBean;
+import com.zhouyu.nft.bean.SeriesListBean;
 
 import java.util.List;
 
-public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.My>{
+public class ScreenAdapter extends RecyclerView.Adapter<ScreenAdapter.My>{
 
     private final Context mContext;
-    private  List<PresellBean.RecordsBean> recordsBeans;
+    private List<SeriesListBean> message;
 
-    public MarketAdapter(Context context, List<PresellBean.RecordsBean> messageList){
+    public ScreenAdapter(Context context, List<SeriesListBean> message){
         mContext=context;
-        this.recordsBeans=messageList;
+        this.message=message;
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    public void addData(List<PresellBean.RecordsBean> recordsBeans){
-        this.recordsBeans.addAll(recordsBeans);
-        notifyDataSetChanged();
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    public void refreshData(List<PresellBean.RecordsBean> recordsBeans){
-        if (recordsBeans!=null&&recordsBeans.size()>0)
-        {
-            this.recordsBeans.clear();
-            this.recordsBeans.addAll(recordsBeans);
-        }
-        notifyDataSetChanged();
-    }
 
     @NonNull
     @Override
     public My onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.adapter_market, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.adapter_screen, parent, false);
 
         return new My(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull My holder, int position) {
+        SeriesListBean seriesListBean = message.get(position);
 
-       holder.itemView.setOnClickListener(v -> setOnClick.onClick("1"));
+        holder.framer_zy.setText(seriesListBean.getSeriesName());
 
+        holder.itemView.setOnClickListener(v -> setOnClick.onClick(seriesListBean.getSid()));
     }
 
     @Override
     public int getItemCount() {
-        return recordsBeans.size();
+        return message.size();
     }
 
     static class My extends RecyclerView.ViewHolder {
+        TextView framer_zy;
         public My(@NonNull View itemView) {
             super(itemView);
+            framer_zy=itemView.findViewById(R.id.framer_zy);
         }
     }
 

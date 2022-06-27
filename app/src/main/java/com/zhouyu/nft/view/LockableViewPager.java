@@ -9,11 +9,9 @@ import androidx.viewpager.widget.ViewPager;
 public class LockableViewPager extends ViewPager {
 
     private boolean swipeLocked;
-
     public LockableViewPager(Context context) {
         super(context);
     }
-
     public LockableViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
     }

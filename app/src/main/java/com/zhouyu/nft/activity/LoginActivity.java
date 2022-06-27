@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -19,6 +20,7 @@ import com.zhouyu.nft.api.GXResponse;
 import com.zhouyu.nft.api.YzApi;
 import com.zhouyu.nft.base.BaseActivity;
 import com.zhouyu.nft.bean.UserInfo;
+import com.zhouyu.nft.util.ParamsConfigs;
 import com.zhouyu.nft.util.SpUtil;
 import com.zhouyu.nft.util.ToastUtils;
 
@@ -34,8 +36,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     EditText ed_inviteCode;
 //    String codeStr;
 //    String codeImg;
-    ImageView rel_patient_care_agreement,cancel;
-    TextView login;
+    ImageView rel_patient_care_agreement,logo;
+    TextView login,use,intimity;
 
     private boolean hasAgreeProtocol = false;//是否勾选
 
@@ -57,7 +59,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     second=60;
                 }
             }else {
-                text_code.setText(second+"秒后重发");
+                text_code.setText(second+"秒");
             }
         }
     };
@@ -75,12 +77,24 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         ed_inviteCode = findViewById(R.id.ed_inviteCode);
         rel_patient_care_agreement = findViewById(R.id.rel_patient_care_agreement);
         login = findViewById(R.id.login);
-        cancel = findViewById(R.id.cancel);
+        use=findViewById(R.id.use);
+        intimity=findViewById(R.id.intimity);
+        logo=findViewById(R.id.logo);
 
+
+        use.setOnClickListener(this);
+        intimity.setOnClickListener(this);
         text_code.setOnClickListener(this);
         rel_patient_care_agreement.setOnClickListener(this);
         login.setOnClickListener(this);
-        cancel.setOnClickListener(this);
+
+        logo.setOnLongClickListener(v -> {
+            if(ParamsConfigs.LOGIN_DEBUG){//开发环境长按标题切环境
+                Intent intent = new Intent(LoginActivity.this, EnvActivity.class);
+                startActivity(intent);
+            }
+            return true;
+        });
 
     }
 
@@ -113,6 +127,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 //                                });
 //                        }
 //                    });
+                    if (phone.length()!=11)
+                    {
+                        ToastUtils.show(LoginActivity.this,"手机号错误，请重新输入");
+                        return;
+                    }
                     getCode(phone);
                 }else {
                     ToastUtils.show(LoginActivity.this,"请输入手机号");
@@ -135,11 +154,17 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     ToastUtils.show(LoginActivity.this,"请完善信息");
                     return;
                 }
+                if (phoneStr.length()!=11)
+                {
+                    ToastUtils.show(LoginActivity.this,"手机号错误，请重新输入");
+                    return;
+                }
                 if (!hasAgreeProtocol)
                 {
                     ToastUtils.show(LoginActivity.this,"请同意协议");
                     return;
                 }
+                showDialog();
                 YzApi.getLogin(this, codeStr, inviteCodeStr, phoneStr, new GXCallback<UserInfo>() {
                     @Override
                     public void onSuccess(UserInfo response, int id) {
@@ -149,23 +174,36 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             intent.setClass(getApplicationContext(), HomeActivity.class);
                             startActivity(intent);
+                            dismissDialog();
                             ToastUtils.show(LoginActivity.this,"登录成功");
                             finish();
                     }
                 });
                 break;
-            case R.id.cancel:
-                finish();
+            case R.id.use:
+                startActivity(new Intent(mContext, FingerpostActivity.class)
+                        .putExtra("XY", ParamsConfigs.SERVICE_XY)
+                        .putExtra("title","用户服务协议")
+                );
+                break;
+            case R.id.intimity:
+                startActivity(new Intent(mContext, FingerpostActivity.class)
+                        .putExtra("XY", ParamsConfigs.PRIVACY_XY)
+                        .putExtra("title","用户隐私协议")
+                );
                 break;
         }
     }
 
+
     private void getCode(String phone) {
         text_code.setOnClickListener(null);
+        showDialog();
         YzApi.getCode(LoginActivity.this, phone, new GXCallback<String>() {
             @Override
             public void onSuccess(String response, int id) {
                 ToastUtils.show(LoginActivity.this, "验证码已发送");
+                dismissDialog();
                 startTime();
             }
             @Override
@@ -203,5 +241,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             timer.cancel();
             timer=null;
         }
+    }
+
+
+
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
     }
 }

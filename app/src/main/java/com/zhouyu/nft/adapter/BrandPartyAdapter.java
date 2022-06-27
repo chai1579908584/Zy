@@ -18,10 +18,10 @@ public class BrandPartyAdapter extends FragmentStatePagerAdapter {
 
     private final List<Fragment> mList = new ArrayList<>(2);
 
-    public BrandPartyAdapter(FragmentManager fm, Context context ) {
+    public BrandPartyAdapter(FragmentManager fm, Context context ,String bid) {
         super(fm);
-        mList.add(new BoutiqueFragment(context));
-        mList.add(new MysteryFragment(context));
+        mList.add(new BoutiqueFragment(context,bid));
+        mList.add(new MysteryFragment(context,bid));
     }
 
     @Override

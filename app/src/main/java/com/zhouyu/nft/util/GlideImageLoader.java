@@ -23,7 +23,7 @@ public class GlideImageLoader extends ImageLoader {
          */
         if (path instanceof BannerBean) {
             BannerBean banner = (BannerBean) path;
-            GlideUtil.GlideCir(context,banner.getBannerUrl(),imageView,30);
+           GlideUtil.GlideCir(context,banner.getBannerUrl(),imageView,30);
 //            GlideLoader.loadCircleRectangleNet(context,imageView, banner.getImgUrl());
         }
 

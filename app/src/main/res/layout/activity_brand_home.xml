@@ -28,14 +28,14 @@
                 android:paddingRight="@dimen/dp_16"
                 android:src="@mipmap/left_withe" />
 
-            <ImageView
-                android:id="@+id/three_d"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:paddingLeft="@dimen/dp_16"
-                android:paddingRight="@dimen/dp_16"
-                android:src="@mipmap/three_d" />
+<!--            <ImageView-->
+<!--                android:id="@+id/three_d"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:paddingLeft="@dimen/dp_16"-->
+<!--                android:paddingRight="@dimen/dp_16"-->
+<!--                android:src="@mipmap/three_d" />-->
         </RelativeLayout>
 
         <ImageView
@@ -44,7 +44,6 @@
             android:layout_height="@dimen/dp_60"
             android:layout_below="@+id/title_rl"
             android:layout_marginLeft="@dimen/dp_40"
-            android:layout_marginTop="@dimen/dp_12"
             />
 
 <!--        <TextView-->
@@ -107,37 +106,31 @@
             android:layout_below="@+id/head_image"
             android:layout_marginLeft="@dimen/dp_40"
             android:layout_marginTop="@dimen/dp_8"
-            android:text="漫威宇宙工作室"
             android:textColor="#ffffffff"
             android:textSize="@dimen/sp_17" />
-        <TextView
-            android:id="@+id/label"
-            android:layout_width="wrap_content"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="系列标签"
-            android:textColor="#ffffffff"
-            android:textSize="@dimen/sp_8"
-            android:background="@drawable/shape_corner_80ffffff_xiaojiao"
+            android:overScrollMode="never"
             android:layout_below="@+id/name"
             android:layout_marginLeft="@dimen/dp_41"
-            android:layout_marginTop="@dimen/dp_7"
-            android:paddingLeft="@dimen/dp_6"
-            android:paddingRight="@dimen/dp_6"
-            android:paddingTop="@dimen/dp_2"
-            android:paddingBottom="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_5"
             />
+
         <TextView
             android:id="@+id/introduce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="工作室介绍漫威宇宙工作室科技化为未来感科技感十足科技感爆棚漫威宇宙工作室科技化为未来科技宇宙…   展开"
-            android:textColor="#ffffffff"
-            android:textSize="@dimen/dp_12"
-            android:layout_below="@+id/label"
-            android:layout_marginTop="@dimen/dp_5"
+            android:layout_below="@+id/recycler"
             android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_5"
             android:layout_marginRight="@dimen/dp_15"
-            />
+            android:textColor="#ffffffff"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="@dimen/dp_12" />
     </RelativeLayout>
     <LinearLayout
         android:layout_width="wrap_content"

@@ -53,11 +53,14 @@ public class PresellBean implements Serializable {
          * salePrice :
          * seriesName :
          * type :
+         * deployUrl :
+         * overNum :
+         * productNo :
          */
 
         private String brandName;
         private String brandlogo;
-        private int gid;
+        private String gid;
         private String imgUrl;
         private String productName;
         private String productType;
@@ -66,6 +69,33 @@ public class PresellBean implements Serializable {
         private String salePrice;
         private String seriesName;
         private String type;
+        private String deployUrl;
+        private String overNum;
+        private String productNo;
+
+        public String getProductNo() {
+            return productNo;
+        }
+
+        public void setProductNo(String productNo) {
+            this.productNo = productNo;
+        }
+
+        public String getOverNum() {
+            return overNum;
+        }
+
+        public void setOverNum(String overNum) {
+            this.overNum = overNum;
+        }
+
+        public String getDeployUrl() {
+            return deployUrl;
+        }
+
+        public void setDeployUrl(String deployUrl) {
+            this.deployUrl = deployUrl;
+        }
 
         public String getBrandName() {
             return brandName;
@@ -83,11 +113,11 @@ public class PresellBean implements Serializable {
             this.brandlogo = brandlogo;
         }
 
-        public int getGid() {
+        public String getGid() {
             return gid;
         }
 
-        public void setGid(int gid) {
+        public void setGid(String gid) {
             this.gid = gid;
         }
 

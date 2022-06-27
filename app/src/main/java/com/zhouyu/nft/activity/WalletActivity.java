@@ -43,7 +43,7 @@ public class WalletActivity extends BaseActivity implements View.OnClickListener
                 startActivity(new Intent(WalletActivity.this,BankCardActivity.class));
                 break;
             case R.id.withdraw:
-                startActivity(new Intent(WalletActivity.this,WithdrawActivity.class));
+               // startActivity(new Intent(WalletActivity.this,WithdrawActivity.class));
                 break;
         }
     }

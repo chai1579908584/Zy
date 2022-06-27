@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginRight="@dimen/dp_12"
+    android:layout_marginTop="@dimen/dp_10"
+    >
+    <TextView
+        android:id="@+id/framer_zy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="宙域"
+        android:paddingRight="@dimen/dp_18"
+        android:paddingLeft="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingBottom="@dimen/dp_3"
+        android:textColor="#ff989898"
+        android:textSize="@dimen/sp_12"
+        android:gravity="center"
+        android:background="@drawable/shape_corner_biankuang_989898"
+        />
+
+</LinearLayout>

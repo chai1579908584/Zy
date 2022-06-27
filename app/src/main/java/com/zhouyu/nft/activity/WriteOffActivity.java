@@ -1,9 +1,11 @@
 package com.zhouyu.nft.activity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.zhouyu.nft.R;
 import com.zhouyu.nft.base.BaseActivity;
@@ -11,18 +13,17 @@ import com.zhouyu.nft.base.BaseActivity;
 public class WriteOffActivity extends BaseActivity implements View.OnClickListener {
 
     ImageView iv_back;
-    ImageView rel_patient_care_agreement;
-    private boolean hasAgreeProtocol = false;//是否勾选
+    TextView sure;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_off);
 
         iv_back=findViewById(R.id.iv_back);
-        rel_patient_care_agreement=findViewById(R.id.rel_patient_care_agreement);
+        sure=findViewById(R.id.sure);
 
+        sure.setOnClickListener(this);
         iv_back.setOnClickListener(this);
-        rel_patient_care_agreement.setOnClickListener(this);
 
     }
 
@@ -34,13 +35,8 @@ public class WriteOffActivity extends BaseActivity implements View.OnClickListen
             case R.id.iv_back:
                 finish();
                 break;
-            case R.id.rel_patient_care_agreement:
-                if(hasAgreeProtocol){
-                    rel_patient_care_agreement.setImageResource(R.mipmap.ic_unchecked);
-                }else{
-                    rel_patient_care_agreement.setImageResource(R.mipmap.ic_checked);
-                }
-                hasAgreeProtocol = !hasAgreeProtocol;
+            case R.id.sure:
+                startActivity(new Intent(WriteOffActivity.this,WriteOffPhoneActivity.class));
                 break;
         }
     }

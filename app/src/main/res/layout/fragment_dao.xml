@@ -4,13 +4,11 @@
     android:layout_height="match_parent"
     android:gravity="center"
     >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_40"
-        android:textColor="#333"
-        android:text="DAO"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/dao_home"
+        android:scaleType="center"
         />
 
 </LinearLayout>

@@ -50,19 +50,29 @@ public class CollectionOfRecordsActivity extends BaseActivity implements View.On
                 startActivity(new Intent(CollectionOfRecordsActivity.this,BuyRecordActivity.class));
                 break;
             case R.id.sell:
-                startActivity(new Intent(CollectionOfRecordsActivity.this,SellRecordActivity.class));
+//                startActivity(new Intent(CollectionOfRecordsActivity.this,SellRecordActivity.class));
+                startActivity(new Intent(mContext, NoActivity.class)
+                        .putExtra("name","出售记录"));
                 break;
             case R.id.donation:
-                startActivity(new Intent(CollectionOfRecordsActivity.this,GiveRecordActivity.class));
+//                startActivity(new Intent(CollectionOfRecordsActivity.this,GiveRecordActivity.class));
+                startActivity(new Intent(mContext, NoActivity.class)
+                        .putExtra("name","转增记录"));
                 break;
             case R.id.airdrop:
-                startActivity(new Intent(CollectionOfRecordsActivity.this,AirDropRecordActivity.class));
+//                startActivity(new Intent(CollectionOfRecordsActivity.this,AirDropRecordActivity.class));
+                startActivity(new Intent(mContext, NoActivity.class)
+                        .putExtra("name","空投记录"));
                 break;
             case R.id.mystery:
-                startActivity(new Intent(CollectionOfRecordsActivity.this,MysteryRecordActivity.class));
+//                startActivity(new Intent(CollectionOfRecordsActivity.this,MysteryRecordActivity.class));
+                startActivity(new Intent(mContext, NoActivity.class)
+                        .putExtra("name","盲盒记录"));
                 break;
             case R.id.fuse:
-                startActivity(new Intent(CollectionOfRecordsActivity.this,FuseRecordActivity.class));
+//                startActivity(new Intent(CollectionOfRecordsActivity.this,FuseRecordActivity.class));
+                startActivity(new Intent(mContext, NoActivity.class)
+                        .putExtra("name","融合记录"));
                 break;
         }
     }

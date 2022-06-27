@@ -1,8 +1,6 @@
 package com.zhouyu.nft.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,17 +18,11 @@ import java.util.List;
 public class AddImageAdapter extends RecyclerView.Adapter<AddImageAdapter.My>{
 
     private final Context mContext;
-    private  List<File> messageList;
+    private final  List<File> messageList;
 
     public AddImageAdapter(Context context, List<File> messageList){
         mContext=context;
         this.messageList=messageList;
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    public void refreshData(List<File> messageList){
-        this.messageList=messageList;
-        notifyDataSetChanged();
     }
 
     @NonNull
@@ -51,12 +43,10 @@ public class AddImageAdapter extends RecyclerView.Adapter<AddImageAdapter.My>{
             if (position<9)
             {
                 holder.addImage.setVisibility(View.VISIBLE);
-                holder.image.setVisibility(View.GONE);
             }else {
                 holder.addImage.setVisibility(View.GONE);
-                holder.image.setVisibility(View.GONE);
             }
-
+            holder.image.setVisibility(View.GONE);
         }
         holder.addImage.setOnClickListener(v -> setOnClick.onClick());
         holder.image.setOnClickListener(v -> setOnClick.onClickItem(position));

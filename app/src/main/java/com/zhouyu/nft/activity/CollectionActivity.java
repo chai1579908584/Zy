@@ -1,5 +1,6 @@
 package com.zhouyu.nft.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -7,17 +8,32 @@ import android.widget.TextView;
 
 import androidx.viewpager.widget.ViewPager;
 
+import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+import com.youth.banner.listener.OnBannerListener;
 import com.zhouyu.nft.R;
 import com.zhouyu.nft.adapter.CollectionAdapter;
-import com.zhouyu.nft.adapter.MysteryRecordAdapter;
+import com.zhouyu.nft.api.GXCallback;
+import com.zhouyu.nft.api.YzApi;
 import com.zhouyu.nft.base.BaseActivity;
+import com.zhouyu.nft.bean.BannerBean;
+import com.zhouyu.nft.bean.UserInfo;
+import com.zhouyu.nft.fragment.HomeFragment;
+import com.zhouyu.nft.util.GlideImageLoader;
+import com.zhouyu.nft.util.ParamsConfigs;
+import com.zhouyu.nft.util.SpUtil;
+import com.zhouyu.nft.util.ToastUtils;
 import com.zhouyu.nft.view.LockableViewPager;
 
-public class CollectionActivity extends BaseActivity implements View.OnClickListener {
+import java.util.List;
+
+public class CollectionActivity extends BaseActivity implements View.OnClickListener, OnBannerListener {
 
     ImageView iv_back;
     TextView presell,hot_sale,previous;
     LockableViewPager mMainPager;
+    Banner slide_pages;
+    List<BannerBean> beanList;
 
     CollectionAdapter mAdapter;
     @Override
@@ -30,6 +46,7 @@ public class CollectionActivity extends BaseActivity implements View.OnClickList
         hot_sale=findViewById(R.id.hot_sale);
         previous=findViewById(R.id.previous);
         mMainPager=findViewById(R.id.main_pager);
+        slide_pages=findViewById(R.id.banner);
 
         iv_back.setOnClickListener(this);
         presell.setOnClickListener(this);
@@ -70,6 +87,30 @@ public class CollectionActivity extends BaseActivity implements View.OnClickList
         });
         selectTab(presell);
         mMainPager.setCurrentItem(0);
+
+        getBanner();
+    }
+
+    private void getBanner() {
+        YzApi.getBanner(mContext, "2", new GXCallback<List<BannerBean>>() {
+            @Override
+            public void onSuccess(List<BannerBean> response, int id) {
+                beanList=response;
+                bannerView();
+            }
+        });
+    }
+
+    //定义一个方法去初始化Banner控件
+    private void bannerView(){
+        slide_pages.setImageLoader(new GlideImageLoader());
+        //设置图片集合
+        slide_pages.setIndicatorGravity(BannerConfig.CENTER);
+        slide_pages.setImages(beanList);
+        //设置轮播间隔时间
+        slide_pages.setDelayTime(3000);
+        slide_pages.setOnBannerListener(CollectionActivity.this);
+        slide_pages.start();
     }
 
     @Override
@@ -103,5 +144,22 @@ public class CollectionActivity extends BaseActivity implements View.OnClickList
             previous.setTextColor(0xff222629);
             tabView.setTextColor(0xff3392FB);
         }
+    }
+
+    @Override
+    public void OnBannerClick(int position) {
+        startActivity(new Intent(mContext, HFiveActivity.class).putExtra("banner",beanList.get(position)));
+//        if (beanList.get(position).getLinkUrl().contains(ParamsConfigs.IS_REAL_NAME))
+//        {
+//            startActivity(new Intent(mContext, HFiveActivity.class).putExtra("banner",beanList.get(position)));
+//        }else {
+//            UserInfo userInfo = SpUtil.readData(mContext);
+//            if ("1".equals(userInfo.getIsRealName()))
+//            {
+//                startActivity(new Intent(mContext, HFiveActivity.class).putExtra("banner",beanList.get(position)));
+//            }else {
+//                ToastUtils.show("请先实名认证");
+//            }
+//        }
     }
 }

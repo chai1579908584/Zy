@@ -7,7 +7,10 @@ import android.util.Log;
 import com.google.gson.reflect.TypeToken;
 import com.zhouyu.nft.MyApplication;
 import com.zhouyu.nft.R;
+import com.zhouyu.nft.base.BaseActivity;
 import com.zhouyu.nft.util.GsonUtils;
+import com.zhouyu.nft.util.LogOutUtil;
+import com.zhouyu.nft.util.ParamsConfigs;
 import com.zhouyu.nft.util.ToastUtils;
 import com.zhy.http.okhttp.callback.Callback;
 import com.zhy.http.okhttp.utils.Platform;
@@ -22,10 +25,10 @@ import okhttp3.Response;
 import timber.log.Timber;
 
 
-public abstract class GXCallback<T>  extends Callback<GXResponse<T>> {
+public abstract class GXCallback<T>  extends Callback<GXResponse<T>>{
 
     /** 请求成功 **/
-    public static final int CODE_SUCCESS = 1000;
+    public static final int CODE_SUCCESS = ParamsConfigs.DATA_SUCCESS;
     /** token已过期 **/
     public static final int CODE_TOKEN_EXPIRED = 3;
 
@@ -97,7 +100,8 @@ public abstract class GXCallback<T>  extends Callback<GXResponse<T>> {
     @Override
     public void onError(Call call, Exception e, int id) {
         Timber.e(e);
-        ToastUtils.show(MyApplication.getContext(), String.valueOf(R.string.network_not_connected));
+        BaseActivity.dismissDialog();
+        ToastUtils.show(MyApplication.getContext(), "网络连接失败，请检查网络设置");
     }
 
     @Override
@@ -116,6 +120,7 @@ public abstract class GXCallback<T>  extends Callback<GXResponse<T>> {
     public abstract void onSuccess(T response, int id);
 
     public void onFailure(GXResponse<String> response, int id){
-        ToastUtils.show(MyApplication.getContext(),response.msg+"(错误码:"+response.code+")");
+        BaseActivity.dismissDialog();
+        ToastUtils.show(MyApplication.getContext(),response.msg+"( "+response.code+" )");
     }
 }

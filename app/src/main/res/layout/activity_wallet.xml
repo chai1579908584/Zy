@@ -62,7 +62,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000.00 RMB"
+            android:text="0.00 RMB"
             android:textColor="#ff222629"
             android:textSize="@dimen/sp_19"
             android:textStyle="bold"
@@ -120,12 +120,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="农业银行  (3260)"
-            android:textColor="#ff222629"
-            android:textSize="@dimen/sp_11"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/dp_10"
-            />
+            android:textColor="#ff222629"
+            android:textSize="@dimen/sp_11" />
     </RelativeLayout>
 
     <LinearLayout

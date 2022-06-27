@@ -5,48 +5,47 @@ import java.io.Serializable;
 
 public class BannerBean implements Serializable {
 
+        /**
+         * title : 12331
+         * introduce : null
+         * bannerUrl : /systemImg/e91e469c-7e76-4d85-8394-03e7c8770e90.jpg
+         * linkUrl : 123123
+         */
 
-    /**
-     * bannerUrl :
-     * introduce :
-     * linkUrl :
-     * title :
-     */
+        private String title;
+        private Object introduce;
+        private String bannerUrl;
+        private String linkUrl;
 
-    private String bannerUrl;
-    private String introduce;
-    private String linkUrl;
-    private String title;
+        public String getTitle() {
+            return title;
+        }
 
-    public String getBannerUrl() {
-        return bannerUrl;
-    }
+        public void setTitle(String title) {
+            this.title = title;
+        }
 
-    public void setBannerUrl(String bannerUrl) {
-        this.bannerUrl = bannerUrl;
-    }
+        public Object getIntroduce() {
+            return introduce;
+        }
 
-    public String getIntroduce() {
-        return introduce;
-    }
+        public void setIntroduce(Object introduce) {
+            this.introduce = introduce;
+        }
 
-    public void setIntroduce(String introduce) {
-        this.introduce = introduce;
-    }
+        public String getBannerUrl() {
+            return bannerUrl;
+        }
 
-    public String getLinkUrl() {
-        return linkUrl;
-    }
+        public void setBannerUrl(String bannerUrl) {
+            this.bannerUrl = bannerUrl;
+        }
 
-    public void setLinkUrl(String linkUrl) {
-        this.linkUrl = linkUrl;
-    }
+        public String getLinkUrl() {
+            return linkUrl;
+        }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
+        public void setLinkUrl(String linkUrl) {
+            this.linkUrl = linkUrl;
+        }
 }
